@@ -1,0 +1,154 @@
+<div class="container">
+    <div class="header">
+        <div class="header-text">
+            2
+            <sup>nd</sup> USD Bangkok 2018 Registration
+        </div>
+        <div class="header-detail">Contact Information</div>
+    </div>
+    <div class="content">
+        <form class="example-form" [formGroup]="myForm" novalidate (ngSubmit)="save(myForm.value, myForm.valid)">
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Title" formControlName="Title" name="Title" required/>
+                <mat-hint *ngIf="(!myForm.controls.Title.valid && summited)">
+                    Title can't empty
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="First (personal) Name" formControlName="FirstName" name="FirstName" required/>
+                <mat-hint *ngIf="(!myForm.controls.FirstName.valid && summited)">
+                    First Name can't empty
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Middle Name" formControlName="MiddleName" name="MiddleName" required/>
+                <mat-hint *ngIf="(!myForm.controls.MiddleName.valid && summited)">
+                    MiddleName can't empty
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Last (Family) Name" formControlName="LastName" name="LastName" required/>
+                <mat-hint *ngIf="(!myForm.controls.LastName.valid && summited)">
+                    LastName can't empty
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Name on Badge" formControlName="Name_on_Badge" name="Name_on_Badge" required/>
+                <mat-hint *ngIf="(!myForm.controls.Name_on_Badge.valid && summited)">
+                    Name on Badge can't empty
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input type="email" matInput placeholder="Email Address" formControlName="Email" name="Email" required/>
+                <mat-hint *ngIf="(!myForm.controls.Email.valid && summited)">
+                    Email invalid
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input type="number" matInput placeholder="Phone" formControlName="Phone" name="Phone" required/>
+                <mat-hint *ngIf="(!myForm.controls.Phone.valid && summited)">
+                    Phone invalid
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input type="number" matInput placeholder="Fax" formControlName="Fax" name="Fax" required/>
+                <mat-hint *ngIf="(!myForm.controls.Fax.valid && summited)">
+                    Fax invalid
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Affiliation/ Company" formControlName="Affiliation" name="Affiliation" required/>
+                <mat-hint *ngIf="(!myForm.controls.Affiliation.valid && summited)">
+                    Affiliation invalid
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-select placeholder="Select Affiliantion Type" formControlName="Affiliation_Type" name="Affiliation_Type" required>
+                    <mat-option *ngFor="let company of companyType" [value]="company?.name">
+                        {{company?.name}}
+                    </mat-option>
+                </mat-select>
+                <mat-hint *ngIf="(!myForm.controls.Affiliation_Type.valid && summited)">
+                    Affiliation invalid
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Department" formControlName="Department" name="Department" required/>
+                <mat-hint *ngIf="(!myForm.controls.Department.valid && summited)">
+                    Department invalid
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email Address 1" formControlName="Email_address_1" name="Email_address_1" required/>
+                <mat-hint *ngIf="(!myForm.controls.Email_address_1.valid && summited)">
+                    Email Address 1 invalid
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input matInput type="email" placeholder="Email Address 2" formControlName="Email_address_2" name="Email_address_2" required/>
+                <mat-hint *ngIf="(!myForm.controls.Email_address_2.valid && summited)">
+                    Email Address 2 invalid
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="City" formControlName="City" name="City" required />
+                <mat-hint *ngIf="(!myForm.controls.City.valid && summited)">
+                    City invalid
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="State/Province/District" formControlName="State_Province_District" name="State_Province_District" required/>
+                <mat-hint *ngIf="(!myForm.controls.State_Province_District.valid && summited)">
+                    State/Province/District invalid
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input type="number" maxlength="5" matInput placeholder="Postal Code" formControlName="PostalCode" name="PostalCode" required />
+                <mat-hint *ngIf="(!myForm.controls.PostalCode.valid && summited)">
+                    Postal Code invalid
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-select placeholder="Select Country" formControlName="Country" name="Country" required>
+                    <mat-option *ngFor="let c of countries" [value]="c">
+                        {{c}}
+                    </mat-option>
+                </mat-select>
+                <mat-hint *ngIf="(!myForm.controls.Country.valid && summited)">
+                    Country invalid
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Registration Rate" formControlName="RegistrationRate" name="RegistrationRate" required />
+                <mat-hint *ngIf="(!myForm.controls.RegistrationRate.valid && summited)">
+                    Registration Rate invalid
+                </mat-hint>
+            </mat-form-field>
+
+            <div class="comment">
+                Each registration includes admission to the technicial session, coffe breake, lunches, social events (particition to the confirmed on the next page)
+            </div>
+
+            <div class="buttons">
+                <button type="submit" mat-raised-button color="warn">Next page <mat-icon>navigate_next</mat-icon> </button>
+            </div>
+        </form>
+    </div>
+</div>

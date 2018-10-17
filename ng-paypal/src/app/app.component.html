@@ -1,0 +1,9 @@
+<div [ngClass]="{
+    'header': headerHeight == 0,
+    'header-100': headerHeight > 0
+}">
+    <app-header-bar></app-header-bar>
+</div>
+<div class="app-router">
+    <router-outlet></router-outlet>
+</div>

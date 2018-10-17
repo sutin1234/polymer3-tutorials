@@ -1,0 +1,16 @@
+.example-full-width {
+    margin: 5px;
+    margin-top: 0px;
+    flex: 1 48%;
+    justify-content: space-around;
+}
+
+.example-full-width .mat-form-field,
+.mat-select {
+    width: 100%;
+}
+
+.error,
+.mat-hint {
+    color: red;
+}

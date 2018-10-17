@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="header">
+        <div class="header-text">
+            Resgister Next Step (Special Need)
+        </div>
+        <div class="header-detail">Contact Information</div>
+    </div>
+    <div class="content">
+        <form class="example-form" [formGroup]="myForm" novalidate (ngSubmit)="save(myForm.value, myForm.valid)">
+            <div class="comment">
+                <div class="header-comment"> Diatary Preferences</div>
+                <div>
+                    please indicate all sections thai applay to your dietary preferences. this information is collected to help ud consider what options should be offered in the furture and does no nessesarity apply to specific food that may be served at tis event.
+                </div>
+                <br />
+                <div class="header-comment"> Vegetarian</div>
+                <div class="header-comment"> Vegann</div>
+                <div>
+                    Fish is okay (exception to the Vegetarian or Vegan)
+                </div>
+                <div>
+                    All seafood is okay (exception to the Vegetarian or Vegan)
+                </div>
+                <div>
+                    Lacto-ovo (exception to the Vegetarian or Vegan)
+                </div>
+                <br />
+                <div class="header-comment"> Kosher</div>
+                <div class="header-comment"> Halai</div>
+                <div>
+                    No seafood
+                </div>
+                <div>
+                    No Dairy (Lactose intolerant)
+                </div>
+                <div>
+                    No Gluten/Wheat
+                </div>
+                <div>
+                    Special Need
+                </div>
+                <br />
+                <div>
+                    Please indicate any special requirements we need to be aware of.
+                </div>
+                <mat-form-field class="example-full-width">
+                    <textarea rows="3" matInput placeholder="Add special need requirement." formControlName="noted" name="noted"></textarea>
+                </mat-form-field>
+                <p> Special Need</p>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" mat-raised-button color="warn">Summit <mat-icon>navigate_next</mat-icon> </button>
+            </div>
+        </form>
+    </div>
+</div>

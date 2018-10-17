@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="header">
+        <div class="header-text">Item information</div>
+        <div class="header-text">Payment information</div>
+        <div class="header-detail">
+            Payment method EPFL payOnline
+            <br> the total price listed above will be collected by USD 2018: Bangkok through paypal/credit card Upon completion of payment entry, ypu will be return DSW 2018 website and recive confirmation email with the conplete detail of your registration.
+        </div>
+    </div>
+    <div class="content">
+        <table>
+            <tbody>
+                <tr>
+                    <th>Item</th>
+                    <th>Description</th>
+                    <th>Qty</th>
+                    <th [ngStyle]="{'width': '100px','text-align': 'center'}">Unit price</th>
+                    <th [ngStyle]="{'width': '100px','text-align': 'center'}">Cost</th>
+                </tr>
+                <tr>
+                    <td>Registration</td>
+                    <td>
+                        Each registration includes admission to the technicial session, coffe breake, lunches, social events (particition to the confirmed on the next page) and one copy of the electronic proccessdings.
+                    </td>
+                    <td>1</td>
+                    <td [ngStyle]="{'text-align': 'right'}">
+                        {{formData?.Country == ('thailand' || 'thai') ? '2000 THB': '100 USD'}}
+                    </td>
+                    <td [ngStyle]="{'text-align': 'right'}">
+                        {{formData?.Country == ('thailand' || 'thai') ? '2000 THB': '100 USD'}}
+                    </td>
+                </tr>
+                <tr [ngStyle]="{'text-align': 'right'}">
+                    <td colspan="4">TOTAL PRICE</td>
+                    <td>
+                        {{formData?.Country == ('thailand' || 'thai') ? '2000 THB': '100 USD'}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="buttons">
+            <div id="paypal-button">
+            </div>
+        </div>
+
+    </div>
+</div>

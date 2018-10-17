@@ -1,0 +1,39 @@
+div.container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 0px 2px #ccc;
+    z-index: 99999;
+}
+
+.header {
+    height: 200px;
+    background-image: url("/assets/header.jpg");
+    -moz-transition: height .5s ease;
+    -webkit-transition: height .5s ease;
+    -o-transition: height .5s ease;
+    transition: height .5s ease;
+}
+
+.header-100 {
+    height: 100px;
+    background-image: url("/assets/header.jpg");
+    -moz-transition: height .5s ease;
+    -webkit-transition: height .5s ease;
+    -o-transition: height .5s ease;
+    transition: height .5s ease;
+}
+
+.header-text {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.header-detail {
+    color: #fff;
+    padding-left: 20px;
+    font-size: 20px;
+}
